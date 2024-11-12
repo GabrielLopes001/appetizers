@@ -30,6 +30,10 @@ struct AppetizersListView: View {
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0 )
             
+            if viewModel.isLoading {
+                LoadingView()
+            }
+            
             if viewModel.isShowingDetail {
                 AppetizersDetailsView(isShowindDetail: $viewModel.isShowingDetail, appetizer: viewModel.selectedAppetizer!)
             }

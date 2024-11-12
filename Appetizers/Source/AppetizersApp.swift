@@ -11,7 +11,17 @@ import SwiftUI
 struct AppetizersApp: App {
     var body: some Scene {
         WindowGroup {
-            AppetizersListView()
+            TabView {
+                AppetizersListView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                AccountView()
+                    .tabItem {
+                        Label("Account", systemImage: "person")
+                    }
+            }
         }
     }
 }

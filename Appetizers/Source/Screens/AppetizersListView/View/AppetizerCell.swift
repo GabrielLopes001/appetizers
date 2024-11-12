@@ -13,9 +13,13 @@ struct AppetizerCell: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: appetizer.imageURL))
-            {image in image.image?.resizable()
-                .aspectRatio(contentMode: .fit)}
+            AsyncImage(url: URL(string: appetizer.imageURL), content: { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }, placeholder: {
+                ProgressView()
+            })
                 .frame(width: 120, height: 90)
                 .cornerRadius(8)
             

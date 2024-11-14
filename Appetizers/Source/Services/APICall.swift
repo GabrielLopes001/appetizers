@@ -11,7 +11,7 @@ class APICall {
     
     static let shared = APICall()
     
-    func fetchData() async throws -> [Request] {
+    func fetchData() async throws -> [Appetizer] {
         let url = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/appetizers"
         
         guard let urlString = URL(string: url) else { return [] }

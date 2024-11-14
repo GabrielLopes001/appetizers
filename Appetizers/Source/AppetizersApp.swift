@@ -9,19 +9,13 @@ import SwiftUI
 
 @main
 struct AppetizersApp: App {
+    
+    var order = Order()
+    
     var body: some Scene {
         WindowGroup {
-            TabView {
-                AppetizersListView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-                
-                AccountView()
-                    .tabItem {
-                        Label("Account", systemImage: "person")
-                    }
-            }
+            /* Disponibilizando a classe Order com o mesmo estado para todas as classes filhas da AppertizerTabView */
+            AppetizerTabView().environmentObject(order)
         }
     }
 }

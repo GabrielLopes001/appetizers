@@ -9,9 +9,9 @@ import Foundation
 
 class AppetizersViewModel: ObservableObject {
     
-    @Published var appetizers: [Request] = []
+    @Published var appetizers: [Appetizer] = []
     @Published var isShowingDetail = false
-    @Published var selectedAppetizer: Request?
+    @Published var selectedAppetizer: Appetizer?
     @Published var isLoading = false
     
     func getAppetizers() {

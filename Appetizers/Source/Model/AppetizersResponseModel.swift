@@ -14,11 +14,11 @@ import Foundation
 
 // MARK: - AppetizersResponse
 struct AppetizersResponse: Codable {
-    let request: [Request]
+    let request: [Appetizer]
 }
 
 // MARK: - Request
-struct Request: Codable, Identifiable {
+struct Appetizer: Codable, Identifiable {
     let name: String
     let id, carbs, calories: Int
     let description: String

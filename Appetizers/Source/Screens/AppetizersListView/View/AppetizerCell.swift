@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppetizerCell: View {
     
-    var appetizer: Request
+    var appetizer: Appetizer
     
     var body: some View {
         HStack {
@@ -19,6 +19,7 @@ struct AppetizerCell: View {
                     .aspectRatio(contentMode: .fit)
             }, placeholder: {
                 ProgressView()
+                    .foregroundStyle(.green)
             })
                 .frame(width: 120, height: 90)
                 .cornerRadius(8)
